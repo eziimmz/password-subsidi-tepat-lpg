@@ -61,9 +61,15 @@ body {
 
 .row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* teks di kiri, tombol di kanan */
+  align-items: center;             /* sejajar vertikal */
   margin-bottom: 6px;
+}
+
+.row p {
+  margin: 0;
+  flex: 1;               /* teks mengambil seluruh ruang tersisa */
+  word-break: break-word; /* teks panjang tetap wrap */
 }
 
 button.copy-btn {
@@ -73,11 +79,7 @@ button.copy-btn {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  flex-shrink: 0; /* tombol tidak mengecil */
-}
-
-button.copy-btn:hover {
-  opacity: 0.85;
+  flex-shrink: 0;        /* tombol tidak mengecil */
 }
 
 .msg {
@@ -90,4 +92,5 @@ button.copy-btn:hover {
   margin-top: 30px;
   font-size: 14px;
 }
+
 
