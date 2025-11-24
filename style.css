@@ -81,39 +81,67 @@ body {
   word-break: break-word;
 }
 
-/* Tombol + pesan horizontal */
-.btn-msg {
-  display: flex;
-  flex-direction: row; /* horizontal */
-  align-items: center; /* sejajar vertikal */
-  gap: 6px;            /* jarak antara pesan dan tombol */
+/* Tombol Salin */
+button.copy-btn {
+  padding: 6px 12px;
+  background: #6B8E23;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+button.copy-btn:hover {
+  transform: scale(1.05);
+  background: #7aa32f;
+}
+
+/* Click effect */
+button.copy-btn:active {
+  transform: scale(0.95);
+  filter: brightness(1.2);
 }
 
 /* Pesan Disalin */
 .msg {
   font-size: 12px;
   color: #444;
+  margin-top: 4px;
   opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s ease-out;
+  transform: translateY(-10px);
+  transition: all 0.5s ease-out;
+  display: block;
 }
 
 .msg.show {
   opacity: 1;
-  animation: fadeUp 1s forwards;
+  animation: fadeUp 1.2s forwards;
 }
 
-/* Animasi fadeUp (tetap) */
+/* Animasi fadeUp untuk pesan */
 @keyframes fadeUp {
-  0% { opacity: 1; transform: translateY(-5px); }
-  50% { opacity: 1; transform: translateY(2px); }
-  100% { opacity: 0; transform: translateY(-5px); }
+  0% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 .footer {
   margin-top: 30px;
   font-size: 14px;
 }
+
 
 
 
