@@ -1,0 +1,91 @@
+body {
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logo {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.desc {
+  background: #E6E6FA;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  max-width: 400px;
+}
+
+.login-btn {
+  padding: 10px 20px;
+  background: #6B8E23;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+.section {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.text-item {
+  background: #E6E6FA;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.text-item h3 {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+button.copy-btn {
+  padding: 4px 10px;
+  background: #6B8E23;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.copy-btn:hover {
+  opacity: 0.85;
+}
+
+.msg {
+  font-size: 12px;
+  color: #444;
+  margin-left: 10px;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+}
