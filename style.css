@@ -82,6 +82,25 @@ body {
 }
 
 /* Tombol Salin */
+.btn-msg {
+  position: relative; /* container relatif */
+  display: inline-block;
+}
+
+.msg {
+  position: absolute;
+  left: -70px;       /* posisi kiri tombol */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #444;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  white-space: nowrap;
+  pointer-events: none;  /* penting: biar pesan tidak menangkap klik */
+  z-index: 1;            /* pastikan berada di bawah tombol */
+}
+
 button.copy-btn {
   padding: 6px 12px;
   background: #6B8E23;
@@ -90,6 +109,7 @@ button.copy-btn {
   border-radius: 8px;
   cursor: pointer;
   flex-shrink: 0;
+  z-index: 2;            /* pastikan tombol di atas pesan */
   transition: all 0.2s ease;
 }
 
@@ -131,6 +151,7 @@ button.copy-btn:hover {
   margin-top: 30px;
   font-size: 14px;
 }
+
 
 
 
