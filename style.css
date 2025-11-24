@@ -89,7 +89,7 @@ body {
 
 .msg {
   position: absolute;
-  left: -70px;       /* posisi kiri tombol */
+  right: 70px;       /* posisi kiri tombol */
   top: 50%;
   transform: translateY(-50%);
   font-size: 12px;
@@ -124,18 +124,6 @@ button.copy-btn:hover {
   display: inline-block; /* agar tombol tetap di tempat */
 }
 
-.msg {
-  position: absolute;
-  right: 70px;          /* posisi di kiri tombol */
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: #444;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-  white-space: nowrap;
-}
-
 .msg.show {
   opacity: 1;
   animation: fadeUp 1s forwards;
@@ -151,6 +139,7 @@ button.copy-btn:hover {
   margin-top: 30px;
   font-size: 14px;
 }
+
 
 
 
