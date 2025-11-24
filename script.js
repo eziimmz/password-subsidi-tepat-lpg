@@ -45,11 +45,10 @@ texts.forEach((item, index) => {
 btn.onclick = () => {
   navigator.clipboard.writeText(text)
     .then(() => {
-      // reset animasi
-      msg.classList.remove("show"); 
+      msg.classList.remove("show");
       void msg.offsetWidth; // trigger reflow
       msg.innerText = "Disalin!"; // tampilkan teks
-      msg.classList.add("show");  // jalankan animasi
+      msg.classList.add("show");
     })
     .catch(() => {
       msg.innerText = "Gagal salin";
@@ -67,5 +66,6 @@ btn.onclick = () => {
 
   listContainer.appendChild(container);
 });
+
 
 
