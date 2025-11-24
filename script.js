@@ -42,16 +42,19 @@ texts.forEach((item, index) => {
     const msg = document.createElement("span");
     msg.className = "msg";
 
-   btn.onclick = () => {
+btn.onclick = () => {
   navigator.clipboard.writeText(text)
     .then(() => {
-      msg.classList.remove("show"); // reset animasi
-      void msg.offsetWidth;          // trigger reflow
-      msg.classList.add("show");    // tampilkan animasi
+      // reset animasi
+      msg.classList.remove("show"); 
+      void msg.offsetWidth; // trigger reflow
+      msg.innerText = "Disalin!"; // tampilkan teks
+      msg.classList.add("show");  // jalankan animasi
     })
     .catch(() => {
       msg.innerText = "Gagal salin";
-      setTimeout(() => { msg.innerText = ""; }, 1600);
+      msg.classList.add("show");
+      setTimeout(()=>{ msg.classList.remove("show"); msg.innerText = ""; }, 1600);
     });
 };
 
@@ -64,4 +67,5 @@ texts.forEach((item, index) => {
 
   listContainer.appendChild(container);
 });
+
 
